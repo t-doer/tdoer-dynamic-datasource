@@ -22,7 +22,7 @@ import com.alibaba.druid.pool.DruidDataSource;
 import com.alibaba.druid.pool.DruidDataSourceFactory;
 import com.tdoer.datasource.config.MasterDatabaseConfig;
 import com.tdoer.datasource.config.TenantDatabaseConfig;
-import com.tdoer.datasource.eo.TenantDatabaseEO;
+import com.tdoer.datasource.eo.TenantDatabaseVo;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -103,7 +103,7 @@ public class DynamicRoutingDataSource extends AbstractRoutingDataSource {
      * @param database 数据库名
      * @return
      */
-    public synchronized TenantDatabaseEO addDataSource(String database, Long tenantId) {
+    public synchronized TenantDatabaseVo addDataSource(String database, Long tenantId) {
         if (StringUtils.isBlank(database))
             return null;
         if (DynamicRoutingDataSource.isExistDataSource(database))
@@ -118,7 +118,7 @@ public class DynamicRoutingDataSource extends AbstractRoutingDataSource {
         //create table after init database and use success
         log.info("create tables.");
         DynamicCreateDataSource.createTable(tenantDatabase);
-        TenantDatabaseEO eo = new TenantDatabaseEO();
+        TenantDatabaseVo eo = new TenantDatabaseVo();
         eo.setDbName(database);
         eo.setDbUrl(tenantDatabaseConfig.getUrl().replace("{0}", database));
         eo.setDriverClassName(tenantDatabaseConfig.getDriverClassName());

@@ -20,7 +20,7 @@ package com.tdoer.datasource.eo;
 
 import java.util.Date;
 
-public class TenantDatabaseEO {
+public class TenantDatabaseVo {
     private Long id;
 
     private Long tenantId;
