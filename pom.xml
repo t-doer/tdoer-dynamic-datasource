@@ -14,8 +14,8 @@
     <groupId>com.tdoer</groupId>
     <artifactId>tdoer-dynamic-datasource</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>tdoer dynamic datasource</name>
-    <description>tdoer dynamic datasource</description>
+    <name>T-Doer Dynamic Datasource</name>
+    <description>T-Doer dynamic datasource configuration based on tenant</description>
     <licenses>
         <license>
             <name>The Apache Software License, Version 2.0</name>
@@ -25,9 +25,9 @@
     </licenses>
     <scm>
         <tag>master</tag>
-        <url>https://github.com/t-doer/tdoer-utils.git</url>
-        <connection>scm:git:https://github.com/t-doer/tdoer-utils.git</connection>
-        <developerConnection>scm:git:https://github.com/t-doer/tdoer-utils.git</developerConnection>
+        <url>https://github.com/t-doer/toder-dynamic-datasource.git</url>
+        <connection>scm:git:https://github.com/t-doer/toder-dynamic-datasource.git</connection>
+        <developerConnection>scm:git:https://github.com/t-doer/toder-dynamic-datasource.git</developerConnection>
     </scm>
     <developers>
         <developer>
